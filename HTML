@@ -1,0 +1,39 @@
+@page "/registration"
+<h3>Registratoin</h3>
+<label>Email:</label>
+<input type="email" @bind=email />
+<br />
+<label>Password:</label>
+<input type="password" @bind=password />
+<br />
+<label>Re-Password:</label>
+<input type="password" @bind=repassword />
+<br />
+<label>Full Name:</label>
+<input type="text" @bind=fullName />
+<br />
+<button @onclick=onRegisterclicked>Register</button>
+<a href="/login" target="_self"> login</a>
+<br />
+<label>@logText</label>
+@code {
+	string email;
+	string password;
+	string repassword;
+	string fullName;
+	string logText;
+	private void onRegisterclicked()
+	{
+		if (email == "" || password == "") return;
+		if (email == "admin@email.com" && password == "admin")
+		{
+			//show login success indication
+			logText = "Login successful";
+		}
+		else
+		{
+			//show login fail indication
+			logText = "Invalid login details";
+		}
+	}
+}
