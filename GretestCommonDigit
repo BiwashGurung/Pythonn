@@ -1,0 +1,26 @@
+#two number input m and n
+m=int(input('enter first number'))
+n=int(input('enter second number'))
+
+#check if n > m, if n > m
+#swap
+if n > m:
+    temp = m
+    m = n
+    n = temp
+#Calculate reminder by dividing m by n
+r = m % n
+
+if r == 0:
+    print("GCD IS", n)
+else:
+    m = n
+    n = r
+
+while r != 0:
+    m = n
+    n = r
+    r = m % n
+
+print("the GCD is:--", n)
+
