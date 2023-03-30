@@ -1,0 +1,10 @@
+a = [[24, 3, 6],[8, 12, 18],[2,66,7]]
+
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        if a[i][j]%2 == 0 and a[i][i]%3 == 0:
+            print(a[i][j], "is exacltly divisible by 2 and 3")
+        if a[i][j]<min:
+            min = a[i][j]
+        if a[i][j]>max:
+            max = a[i][j]
