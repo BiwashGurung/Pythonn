@@ -1,0 +1,11 @@
+numbers = [1,2,4,3,5]
+
+for i in range(1, len(numbers)):
+    if numbers[i] < numbers[i-1]:
+        is_ascending = False
+        break
+    else:
+        is_ascending = True
+
+print (is_ascending)        
+> False
